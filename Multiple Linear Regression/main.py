@@ -85,8 +85,8 @@ X_test = test_data[feature_columns]
 Y_test = test_data["selling_price"]
 
 learning_rate=0.001
-iteration = list(range(0,counter))
 new_theta,counter = gradient_descent(X,Y,theta,learning_rate)
+iteration = list(range(0,counter))
 predictions = predict(X_test, new_theta)
 
 predictions_df = pd.DataFrame({'predicted_selling_price': predictions})
